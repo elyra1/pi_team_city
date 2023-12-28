@@ -1,3 +1,4 @@
+import pytest
 from programm import find_hypotenuse
 def test_find_hypotenuse_default():
     assert(5 == find_hypotenuse(3, 4))
@@ -14,9 +15,8 @@ def test_find_hypotenuse_correct():
     assert(h**2 - 25 == 16)
     assert(h**2 - 16 == 25)
     
-test_find_hypotenuse_default()
-test_find_hypotenuse_0_side()
-test_find_hypotenuse_correct()
-print("Tests completed")
+
+if __name__ == "__main__":
+    pytest.main(['--teamcity'])
 
 
